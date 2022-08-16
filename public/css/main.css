@@ -783,6 +783,10 @@ body{
   width: 240px !important;
 }
 
+.min-w-\[340px\]{
+  min-width: 340px;
+}
+
 .max-w-\[295px\]{
   max-width: 295px;
 }
@@ -797,6 +801,10 @@ body{
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.\!flex-row{
+  flex-direction: row !important;
 }
 
 .flex-col{
@@ -837,6 +845,10 @@ body{
 
 .gap-10{
   gap: 2.5rem;
+}
+
+.gap-\[30px\]{
+  gap: 30px;
 }
 
 .gap-y-\[50px\]{
