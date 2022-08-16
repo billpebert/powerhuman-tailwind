@@ -33,15 +33,17 @@
                 <input type="text" class="input-field" value="Product Marketing">
             </div>
             <div class="form-group">
-                <label for="" class="text-grey">Responsibility</label>
-                <div class="inline-flex items-center gap-5">
-                    <input type="text" class="w-full input-field">
-                    <a href="#" role="button">
-                        <img src="../assets/svgs/ric-plus.svg" alt="">
-                    </a>
-                </div>
+                <label for="idRes" class="text-grey">Responsibility</label>
+                <ul id="listResp" class="flex flex-col gap-4">
+                    <li class="inline-flex items-center w-full gap-5" id="dataList">
+                        <input type="text" id="idRes" name="responsibility" class="w-full input-field">
+                        <a href="#" role="button" id="addRsp">
+                            <img src="../assets/svgs/ric-plus.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <a href="my_teams.html" class="w-full btn btn-primary mt-[14px]">
+            <a href="roles.html" class="w-full btn btn-primary mt-[14px]">
                 Save Role
             </a>
         </form>
@@ -49,6 +51,30 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#addRsp").click(function () {
+                var value = $("input[name='responsibility']").val()
+
+                var newElement =
+                    `<li class='inline-flex items-center w-full gap-5'><input type='text' id='idRes' name='responsibility' class='w-full input-field' disabled value='${value}'><a href='#' role='button' id='rmRsp'><img src='../assets/svgs/ric-close-red.svg' alt='PowerHuman'></a></li>`
+
+                // console.log($("#dataList").children("input#idRes").val(''))
+                $("#dataList").children("input#idRes").val('')
+                $("#listResp").prepend(newElement)
+
+
+                // console.log(document.getElementById("dataList").previousElementSibling.children)
+            })
+        })
+
+        document.addEventListener('mousemove', function () {
+            $("#rmRsp").click(function (e) {
+                // console.log(e.currentTarget.parentElement)
+                e.currentTarget.parentElement.remove()
+            })
+        })
+    </script>
 </body>
 
 </html>

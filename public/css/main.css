@@ -702,20 +702,12 @@ body{
   margin-top: 1.25rem;
 }
 
-.mt-\[70px\]{
-  margin-top: 70px;
-}
-
-.mt-\[50px\]{
-  margin-top: 50px;
-}
-
 .mb-\[2px\]{
   margin-bottom: 2px;
 }
 
-.block{
-  display: block;
+.mt-\[70px\]{
+  margin-top: 70px;
 }
 
 .flex{
@@ -808,10 +800,6 @@ body{
   flex-wrap: wrap;
 }
 
-.items-end{
-  align-items: flex-end;
-}
-
 .items-center{
   align-items: center;
 }
@@ -844,12 +832,12 @@ body{
   gap: 6px;
 }
 
-.gap-\[30px\]{
-  gap: 30px;
-}
-
 .gap-5{
   gap: 1.25rem;
+}
+
+.gap-\[30px\]{
+  gap: 30px;
 }
 
 .gap-y-\[50px\]{
@@ -1087,11 +1075,6 @@ body{
   --tw-ring-color: rgb(70 64 222 / var(--tw-ring-opacity));
 }
 
-.brightness-50{
-  --tw-brightness: brightness(.5);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1197,16 +1180,7 @@ body{
   background-color: rgb(171 179 196 / var(--tw-bg-opacity));
 }
 
-.disabled\:opacity-50:disabled{
-  opacity: 0.5;
-}
-
 .disabled\:outline-none:disabled{
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.disabled\:brightness-50:disabled{
-  --tw-brightness: brightness(.5);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
