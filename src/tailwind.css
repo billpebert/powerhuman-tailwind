@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .flex::before,
+    .flex::after {
+        display: none !important;
+    }
+    
+    body{
+        @apply bg-page font-poppins
+    }
+}
+
+@layer components{
+    .card{
+        @apply bg-white p-6 rounded-[26px] flex flex-col gap-y-4 max-w-[500px]
+    }
+
+    .input-field{
+        @apply placeholder:text-grey text-dark py-[11px] px-6 rounded-[100px] outline outline-[1.4px]  outline-dark focus:outline-primary
+    }
+
+    .btn{
+        @apply rounded-full py-[11px] px-9 font-semibold text-center capitalize
+    }
+
+    .btn-primary{
+        @apply bg-primary text-white
+    }
+}
+
+@layer utilities{
+    .form-group{
+        @apply flex flex-col gap-2
+    }
+}
