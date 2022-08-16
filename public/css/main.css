@@ -564,6 +564,40 @@ body{
   --tw-backdrop-sepia:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .card::before, 
     .card::after {
   display: none;
@@ -625,6 +659,22 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.relative{
+  position: relative;
+}
+
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
+
+.col-span-9{
+  grid-column: span 9 / span 9;
+}
+
+.m-auto{
+  margin: auto;
+}
+
 .mt-\[70px\]{
   margin-top: 70px;
 }
@@ -641,12 +691,64 @@ body{
   margin-top: 14px;
 }
 
+.mb-\[30px\]{
+  margin-bottom: 30px;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .flex{
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
+.h-\[46px\]{
+  height: 46px;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.min-h-\[200px\]{
+  min-height: 200px;
+}
+
+.min-h-\[468px\]{
+  min-height: 468px;
+}
+
+.w-\[516px\]{
+  width: 516px;
+}
+
+.w-\[46px\]{
+  width: 46px;
+}
+
 .w-full{
   width: 100%;
+}
+
+.grid-cols-12{
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -661,13 +763,77 @@ body{
   justify-content: center;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-\[70px\]{
+  gap: 70px;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-11{
+  gap: 2.75rem;
+}
+
+.gap-y-\[50px\]{
+  row-gap: 50px;
+}
+
+.\!gap-y-10{
+  row-gap: 2.5rem !important;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.\!border-none{
+  border-style: none !important;
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-\[11px\]{
+  padding: 11px;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-\[50px\]{
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
+.pr-\[70px\]{
+  padding-right: 70px;
+}
+
+.pt-\[50px\]{
+  padding-top: 50px;
+}
+
 .text-center{
   text-align: center;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[32px\]{
@@ -679,12 +845,34 @@ body{
   line-height: 1.5rem;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.italic{
+  font-style: italic;
+}
+
 .leading-7{
   line-height: 1.75rem;
+}
+
+.text-grey{
+  --tw-text-opacity: 1;
+  color: rgb(171 179 196 / var(--tw-text-opacity));
 }
 
 .text-dark{
@@ -692,9 +880,14 @@ body{
   color: rgb(18 31 62 / var(--tw-text-opacity));
 }
 
-.text-grey{
+.text-red-500{
   --tw-text-opacity: 1;
-  color: rgb(171 179 196 / var(--tw-text-opacity));
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.\!outline-none{
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
 }
 
 .form-group::before, 
@@ -706,4 +899,51 @@ body{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.nav-link::before, 
+    .nav-link::after {
+  display: none;
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 11px;
+}
+
+.nav-link.active{
+  border-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 64 222 / var(--tw-bg-opacity));
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nav-link.active img{
+  --tw-brightness: brightness(0);
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.form-icon-search{
+  background-image: url('../assets/svgs/ic-search.svg');
+  background-position: center right 24px;
+  background-repeat: no-repeat;
+}
+
+.notification-dot::after{
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 30;
+  height: 6px;
+  width: 6px;
+  align-content: flex-end;
+  border-radius: 9999px;
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
