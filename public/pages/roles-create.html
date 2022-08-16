@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label for="idRes" class="text-grey">Responsibility</label>
                 <ul id="listResp" class="flex flex-col gap-4">
-                    <li class="inline-flex items-center w-full gap-5" id="dataList">
+                    <li class="inline-flex items-center w-full gap-5">
                         <input type="text" id="idRes" name="responsibility" class="w-full input-field">
                         <a href="#" role="button" id="addRsp">
                             <img src="../assets/svgs/ric-plus.svg" alt="">
@@ -54,12 +54,13 @@
     <script>
         $(document).ready(function () {
             $("#addRsp").click(function (e) {
-                var value = e.currentTarget.previousElementSibling.value
+                var target = e.currentTarget.previousElementSibling
+                var dataValue = target.value
 
                 var newElement =
-                    `<li class='inline-flex items-center w-full gap-5'><input type='text' id='idRes' name='responsibility' class='w-full input-field' disabled value='${value}'><a href='#' role='button' id='rmRsp'><img src='../assets/svgs/ric-close-red.svg' alt='PowerHuman'></a></li>`
+                    `<li class='inline-flex items-center w-full gap-5'><input type='text' id='idRes' name='responsibility' class='w-full input-field' disabled value='${dataValue}'><a href='#' role='button' id='rmRsp'><img src='../assets/svgs/ric-close-red.svg' alt='PowerHuman'></a></li>`
 
-                $("#dataList").children("input#idRes").val('')
+                target.value = ''
                 $("#listResp").prepend(newElement)
             })
         })
