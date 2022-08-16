@@ -5,185 +5,193 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerHuman HRIS</title>
+    <title>PowerHuman HRIS - Dashboard</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
 
-    <div class="grid grid-cols-12 gap-[70px] pr-[70px]">
-        <!-- Sidebar -->
-        <div class="col-span-3">
-            <div class="bg-white min-h-screen h-full px-6 py-[50px] gap-y-[50px] flex flex-col">
-                <a href="#" class="flex justify-center">
-                    <img src="../assets/svgs/logo-type.svg" alt="">
+    <!-- Sidebar -->
+    <div class="fixed max-w-[295px] w-full overflow-y-auto h-full bg-white">
+        <div class="px-6 py-[50px] gap-y-[50px] flex flex-col">
+            <a href="#" class="flex justify-center">
+                <img src="../assets/svgs/logo-type.svg" alt="">
+            </a>
+            <div class="flex flex-col gap-4">
+                <div class="text-sm text-grey">Daily Use</div>
+                <a href="index.html" class="nav-link active">
+                    <img src="../assets/svgs/ic-grid.svg" alt="">
+                    Overview
                 </a>
-                <div class="flex flex-col gap-4">
-                    <div class="text-sm text-grey">Daily Use</div>
-                    <a href="#" class="nav-link active">
-                        <img src="../assets/svgs/ic-grid.svg" alt="">
-                        Overview
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-users.svg" alt="">
-                        Employees
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-briefcase.svg" alt="">
-                        My Teams
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-dollar.svg" alt="">
-                        Payroll
-                    </a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <div class="text-sm text-grey">Others</div>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-box.svg" alt="">
-                        Insurances
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-home.svg" alt="">
-                        Company
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-gift.svg" alt="">
-                        Rewards
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-settings.svg" alt="">
-                        Settings
-                    </a>
-                    <a href="#" class="nav-link">
-                        <img src="../assets/svgs/ic-signout.svg" alt="">
-                        Logout
-                    </a>
-                </div>
+                <a href="employees.html" class="nav-link">
+                    <img src="../assets/svgs/ic-users.svg" alt="">
+                    Employees
+                </a>
+                <a href="my_teams.html" class="nav-link">
+                    <img src="../assets/svgs/ic-briefcase.svg" alt="">
+                    My Teams
+                </a>
+                <a href="roles.html" class="nav-link">
+                    <img src="../assets/svgs/ic-dollar.svg" alt="">
+                    Payroll
+                </a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="text-sm text-grey">Others</div>
+                <a href="#" class="nav-link">
+                    <img src="../assets/svgs/ic-box.svg" alt="">
+                    Insurances
+                </a>
+                <a href="#" class="nav-link">
+                    <img src="../assets/svgs/ic-home.svg" alt="">
+                    Company
+                </a>
+                <a href="#" class="nav-link">
+                    <img src="../assets/svgs/ic-gift.svg" alt="">
+                    Rewards
+                </a>
+                <a href="#" class="nav-link">
+                    <img src="../assets/svgs/ic-settings.svg" alt="">
+                    Settings
+                </a>
+                <a href="#" class="nav-link">
+                    <img src="../assets/svgs/ic-signout.svg" alt="">
+                    Logout
+                </a>
             </div>
         </div>
+    </div>
+    <!-- Main Content -->
+    <div class="pr-[70px] py-[50px] ml-[365px]">
+        <!-- Top Section -->
+        <section class="flex items-center justify-between">
+            <div class="text-[32px] font-semibold text-dark">
+                Overview
+            </div>
+            <div class="flex items-center gap-4">
+                <input type="text" name="" id=""
+                    class="input-field !outline-none !border-none italic w-[516px] form-icon-search"
+                    placeholder="Search people, team, project">
+                <a href="#" class="w-[46px] h-[46px] bg-white rounded-full p-[11px] relative notification-dot">
+                    <img src="../assets/svgs/ic-bell.svg" alt="">
+                </a>
+            </div>
+        </section>
 
-        <!-- Main Content -->
-        <div class="col-span-9 py-[50px]">
-            <!-- Top Section -->
-            <section class="flex items-center justify-between">
-                <div class="text-[32px] font-semibold text-dark">
-                    Overview
-                </div>
-                <div class="flex items-center gap-4">
-                    <input type="text" name="" id=""
-                        class="input-field !outline-none !border-none italic w-[516px] form-icon-search"
-                        placeholder="Search people, team, project">
-                    <a href="#" class="w-[46px] h-[46px] bg-white rounded-full p-[11px] relative notification-dot">
-                        <img src="../assets/svgs/ic-bell.svg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <section class="pt-[50px]">
-                <!-- Section Header -->
-                <div class="mb-[30px]">
-                    <div class="text-xl font-medium text-dark">
-                        Statistics
-                    </div>
-                    <p class="text-grey">Your business growth</p>
-                </div>
-
-                <div class="grid grid-cols-3 gap-11">
-                    <div class="card !gap-y-10 min-h-[200px]">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-grey">Employees</p>
-                                <div class="text-[32px] font-bold text-dark">
-                                    0
-                                </div>
-                            </div>
-                            <a href="#">
-                                <img src="../assets/svgs/ric-plus.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card !gap-y-10 min-h-[200px]">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-grey">Teams</p>
-                                <div class="text-[32px] font-bold text-dark">
-                                    0
-                                </div>
-                            </div>
-                            <a href="#">
-                                <img src="../assets/svgs/ric-plus.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card !gap-y-10 min-h-[200px]">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-grey">Projects</p>
-                                <div class="text-[32px] font-bold text-dark">
-                                    0
-                                </div>
-                            </div>
-                            <a href="#">
-                                <img src="../assets/svgs/ric-plus.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="pt-[50px]">
-                <div class="grid justify-between grid-cols-2 gap-11">
+        <section class="pt-[50px]">
+            <!-- Section Header -->
+            <div class="mb-[30px]">
+                <div class="flex items-center justify-between gap-6">
                     <div>
-                        <!-- Section Header -->
-                        <div class="mb-[30px]">
-                            <div class="text-xl font-medium text-dark">
-                                Documents
-                            </div>
-                            <p class="text-grey">Standard procedure</p>
+                        <div class="text-xl font-medium text-dark">
+                            Statistics
                         </div>
-                        <div class="card min-h-[468px]">
-                            <div class="m-auto text-center">
-                                <div class="text-xl font-bold text-dark">
-                                    No Documents
+                        <p class="text-grey">Your business growth</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-11">
+                <div class="card !gap-y-10 min-h-[200px]">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-grey">Employees</p>
+                            <div class="text-[32px] font-bold text-dark mt-[6px]">
+                                0
+                            </div>
+                        </div>
+                        <a href="#">
+                            <img src="../assets/svgs/ric-plus.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="card !gap-y-10 min-h-[200px]">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-grey">Teams</p>
+                            <div class="text-[32px] font-bold text-dark mt-[6px]">
+                                0
+                            </div>
+                        </div>
+                        <a href="#">
+                            <img src="../assets/svgs/ric-plus.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="card !gap-y-10 min-h-[200px]">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-grey">Projects</p>
+                            <div class="text-[32px] font-bold text-dark mt-[6px]">
+                                0
+                            </div>
+                        </div>
+                        <a href="#">
+                            <img src="../assets/svgs/ric-plus.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-[50px]">
+            <div class="grid grid-cols-2 gap-11">
+                <div>
+                    <!-- Section Header -->
+                    <div class="mb-[30px]">
+                        <div class="flex items-center justify-between gap-6">
+                            <div>
+                                <div class="text-xl font-medium text-dark">
+                                    Documents
                                 </div>
-                                <p class="text-grey mt-5 mb-[30px]">
-                                    Add guidance or design style for <br>
-                                    your employees in company
-                                </p>
-                                <button type="button" class="btn btn-primary">
-                                    Upload File
-                                </button>
+                                <p class="text-grey">Standard procedure</p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <!-- Section Header -->
-                        <div class="mb-[30px]">
-                            <div class="text-xl font-medium text-dark">
-                                History
+                    <div class="card min-h-[468px]">
+                        <div class="m-auto text-center">
+                            <div class="text-xl font-bold text-dark">
+                                No Documents
                             </div>
-                            <p class="text-grey">Track the flow</p>
-                        </div>
-                        <div class="card min-h-[468px]">
-                            <div class="m-auto text-center">
-                                <div class="text-xl font-bold text-dark">
-                                    No History
-                                </div>
-                                <p class="text-grey mt-5 mb-[30px]">
-                                    Information of employees added <br>
-                                    and promoting shown here
-                                </p>
-                                <button type="button" class="btn btn-primary">
-                                    Upload File
-                                </button>
-                            </div>
+                            <p class="text-grey mt-5 mb-[30px]">
+                                Add guidance or design style for <br>
+                                your employees in company
+                            </p>
+                            <button type="button" class="btn btn-primary">
+                                Upload File
+                            </button>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-
+                <div>
+                    <!-- Section Header -->
+                    <div class="mb-[30px]">
+                        <div class="flex items-center justify-between gap-6">
+                            <div>
+                                <div class="text-xl font-medium text-dark">
+                                    History
+                                </div>
+                                <p class="text-grey">Track the flow</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card min-h-[468px]">
+                        <div class="m-auto text-center">
+                            <div class="text-xl font-bold text-dark">
+                                No History
+                            </div>
+                            <p class="text-grey mt-5 mb-[30px]">
+                                Information of employees added <br>
+                                and promoting shown here
+                            </p>
+                            <button type="button" class="btn btn-primary">
+                                Upload File
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 </body>
