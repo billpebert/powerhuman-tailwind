@@ -53,24 +53,19 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $("#addRsp").click(function () {
-                var value = $("input[name='responsibility']").val()
+            $("#addRsp").click(function (e) {
+                var value = e.currentTarget.previousElementSibling.value
 
                 var newElement =
                     `<li class='inline-flex items-center w-full gap-5'><input type='text' id='idRes' name='responsibility' class='w-full input-field' disabled value='${value}'><a href='#' role='button' id='rmRsp'><img src='../assets/svgs/ric-close-red.svg' alt='PowerHuman'></a></li>`
 
-                // console.log($("#dataList").children("input#idRes").val(''))
                 $("#dataList").children("input#idRes").val('')
                 $("#listResp").prepend(newElement)
-
-
-                // console.log(document.getElementById("dataList").previousElementSibling.children)
             })
         })
 
         document.addEventListener('mousemove', function () {
             $("#rmRsp").click(function (e) {
-                // console.log(e.currentTarget.parentElement)
                 e.currentTarget.parentElement.remove()
             })
         })
