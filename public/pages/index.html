@@ -12,11 +12,20 @@
 <body>
 
     <!-- Sidebar -->
-    <div class="fixed max-w-[295px] w-full overflow-y-auto h-full bg-white">
+    <div class="hidden lg:block fixed lg:max-w-[295px] w-full overflow-y-auto h-full bg-white z-[999]" id="sidebarHRIS">
         <div class="px-6 py-[50px] gap-y-[50px] flex flex-col">
-            <a href="#" class="flex justify-center">
-                <img src="../assets/svgs/logo-type.svg" alt="">
-            </a>
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex justify-center">
+                    <img src="../assets/svgs/logo-type.svg" alt="">
+                </a>
+                <a href="#" id="toggleCloseSidebar" class="lg:hidden">
+                    <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </a>
+            </div>
             <div class="flex flex-col gap-4">
                 <div class="text-sm text-grey">Daily Use</div>
                 <a href="index.html" class="nav-link active">
@@ -62,16 +71,30 @@
         </div>
     </div>
     <!-- Main Content -->
-    <div class="pr-[70px] py-[50px] ml-[365px]">
+    <div class="lg:pr-[70px] py-[50px] lg:ml-[320px] xl:ml-[365px] px-4 lg:pl-0">
+
         <!-- Top Section -->
-        <section class="flex items-center justify-between">
-            <div class="text-[32px] font-semibold text-dark">
-                Overview
+        <section class="flex flex-col flex-wrap justify-between gap-6 md:items-center md:flex-row">
+            <div class="flex items-center justify-between gap-4">
+                <a href="#" id="toggleOpenSidebar" class="lg:hidden">
+                    <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7">
+                        </path>
+                    </svg>
+                </a>
+                <div class="text-[32px] font-semibold text-dark">
+                    Overview
+                </div>
             </div>
             <div class="flex items-center gap-4">
-                <input type="text" name="" id="" class="input-field !outline-none !border-none italic w-[516px] form-icon-search ring-indigo-200
-                    focus:ring-2 transition-all duration-300" placeholder="Search people, team, project">
-                <a href="#" class="w-[46px] h-[46px] bg-white rounded-full p-[11px] relative notification-dot">
+                <form class="shrink md:w-[516px] w-full">
+                    <input type="text" name="" id="" class="input-field !outline-none !border-none italic form-icon-search ring-indigo-200
+                        focus:ring-2 transition-all duration-300 w-full" placeholder="Search people, team, project">
+                </form>
+                <a href="#"
+                    class="flex-none w-[46px] h-[46px] bg-white rounded-full p-[11px] relative notification-dot">
                     <img src="../assets/svgs/ic-bell.svg" alt="">
                 </a>
             </div>
@@ -90,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 gap-11">
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-11">
                 <div class="card !gap-y-10 min-h-[200px]">
                     <div class="flex items-center justify-between">
                         <div>
@@ -134,7 +157,7 @@
         </section>
 
         <section class="pt-[50px]">
-            <div class="grid grid-cols-2 gap-11">
+            <div class="grid md:grid-cols-2 gap-11">
                 <!-- Documents -->
                 <div>
                     <!-- Section Header -->
@@ -148,7 +171,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card min-h-[468px]">
+                    <div class="card md:min-h-[468px]">
                         <div class="m-auto text-center">
                             <div class="text-xl font-bold text-dark">
                                 No Documents
@@ -198,6 +221,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../script/sidebarToggler.js"></script>
 </body>
 
 </html>
